@@ -19,6 +19,7 @@ def divis(a, b):
 
 def calc():
     while True:
+        y = ['-', '+', '/', '*']
         a = input('Введите первую переменную: ')
         b = input('Введите вторую переменную: ')
         try:
@@ -28,6 +29,9 @@ def calc():
             print('Ошибка переменной')
             continue
         x = str(input('Введите действие: '))
+        if x not in y:
+            print('Ошибка действия нет')
+            continue
         if x == '-':
             subtrac(a, b)
             print(subtrac(a, b))
